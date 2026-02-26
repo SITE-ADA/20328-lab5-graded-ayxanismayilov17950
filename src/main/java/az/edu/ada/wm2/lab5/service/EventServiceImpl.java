@@ -153,7 +153,7 @@ public class EventServiceImpl implements EventService {
     @Override
     public Event updateEventPrice(UUID id, BigDecimal newPrice) {
 
-        if (id == null || newPrice == null || newPrice.compareTo(BigDecimal.ZERO) > 0) {
+        if (id == null || newPrice == null || newPrice.compareTo(BigDecimal.ZERO) <= 0) {
             throw new IllegalArgumentException("ID or price doesn't exist");
         }
 
